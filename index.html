@@ -226,6 +226,31 @@
     button:hover {
         background: #0097a7;
     }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem; /* Smaller heading size */
+            }
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center content */
+            }
+            .hero-image, .paragraph {
+                width: 90%; /* Full width on smaller screens */
+                text-align: center; /* Center text */
+            }
+            .a, .b, .c {
+                width: 100%; /* Full width for footer sections */
+                text-align: center; /* Center text in footer */
+            }
+        }
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem; /* Further reduce heading size */
+            }
+            .btn {
+                padding: 0.5rem 1rem; /* Smaller button padding */
+            }
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -265,7 +290,7 @@
             <a href="projects.html" class="btn">View My Work</a>
         </div>
         <div class="hero-image">
-            <img src="meee.png" alt="IHIMBAZWE Hyacinthe" width="20" height="570">
+            <img src="meee.png" alt="IHIMBAZWE Hyacinthe" >
         </div>
     </section>
 
