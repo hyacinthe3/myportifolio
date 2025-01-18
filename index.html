@@ -156,6 +156,61 @@
                 align-items: center; /* Center footer content */
             }
         }
+        .a, .b, .c {
+            width: 30%;
+            height: auto;
+            text-align: left;
+            border: none;
+            margin-bottom: 20px; /* Margin for spacing */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            padding: 20px; /* Added padding for spacing */
+        }
+        .paragraph {
+            width: 40%;
+            text-align: left;
+            border: none;
+        }
+        .hero-image {
+            width: 40%;
+            border-radius: 10px;
+        }
+        .hero-image img {
+            width: 100%; /* Ensure image scales with its container */
+            border-radius: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background 0.3s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+            animation: spin 1s ease-in-out;
+        }
+        .project-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-card {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -195,12 +250,172 @@
             <a href="projects.html" class="btn">View My Work</a>
         </div>
         <div class="hero-image">
-
-           <img src="meee.png" alt=" Ihimbazwe Hyacinthe">
-
+            <img src="me.jpg" alt="IHIMBAZWE Hyacinthe" width="20" height="570">
         </div>
     </section>
 
+    <section id="about">
+        <center>
+            <h2>About Me</h2>
+            <hr style="
+                border: none;
+                height: 5px;
+                width: 95%;
+                background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+                margin: 20px 0;
+                animation: floating 3s ease-in-out infinite;
+            "></center>
+
+        <div class="container">
+            <div class="hero-image">
+                <img src="me.jpg" alt="IHIMBAZWE Hyacinthe">
+            </div>
+            <div class="paragraph">
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">I am deeply passionate about software development,</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">driven by a desire to create innovative solutions</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">that blend functionality. Continuously learning and</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">adapting, I thrive on tackling complex challenges</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">and building applications that make a meaningful impact.</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">It would be a great pleasure working with you to reach</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">something big and find solutions for different problems.</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">My projects are designed using the following:</p>
+                <br>
+                <i class="fab fa-html5" style="color: #E34F26; margin: 10px;"></i> HTML
+                <i class="fab fa-css3-alt" style="color: #1572B6; margin: 10px;"></i> CSS
+                <i class="fab fa-php" style="color: #777BB4; margin: 10px;"></i> PHP
+                <i class="fas fa-database" style="color: #4479A1; margin: 10px;"></i> MySQL
+                <i class="fab fa-python" style="color: #3776AB; margin: 10px;"></i> Python <br><br>
+                <a href="hyacinthe cv.pdf" target="_blank" class="btn">View My CV</a>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+        <center><h2>My Projects</h2>
+        <hr style="
+            border: none;
+            height: 5px;
+            width: 90%;
+            background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+            margin: 20px 0;
+            animation: floating 3s ease-in-out infinite;
+        "></center>
+    <section id="projects">
+        
+            <div class="project-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <img src="ami.png" alt="Project 1" style="width: 100%; height: 150px; border-radius: 10px;">
+                    <p style="margin: 10px 0;">
+                        AMI BODY ORGANICS
+                        An e-commerce website for ami body organics store that sells body lotions, sun gels, and other products made from organic plants. This site allows customers to browse, purchase, and get home delivery of products, with an option for online payment.
+                    </p>
+                    <a href="#" class="btn">Review</a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <img src="logo.png" alt="Project 2" style="width: 90%; height: 150px; border-radius: 10px;">
+                    <p style="margin: 10px 0;">
+                        Kurujyejuru Driving School System allows teachers to register their students' details, track attendance, payments, and examination codes. It also assists teachers in focusing on students with upcoming exams and helps categorize pass/fail results.
+                    </p>
+                    <a href="#" class="btn">Review</a>
+                </div>
+            </div>
+        
+    </section>
+    <section id="contact">
+        <center>         
+            <h2>Contact Me</h2>
+    
+            <hr style="
+            border: none;
+            height: 5px;
+            width: 90%;
+            background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+            margin: 20px 0;
+            animation: floating 3s ease-in-out infinite;
+          "></center>
+        <div class="container"> 
+           
+
+    
+            <p class="intro">
+                I’m always open to new ideas and opportunities. Feel free to reach out to me for any inquiries, collaborations, or opportunities through the contact information below.
+            </p>
+    
+            <!-- Flex Container for Contact Info and Form -->
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <!-- Contact Information -->
+                <div class="contact-info" style="flex: 1; min-width: 300px;">
+                    <div class="info-block">
+                        <div class="info-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <h3>Kigali, Rwanda</h3>
+                                <p>KN 7 Ave, Kigali</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <h3>Phone: +250 785 394 831</h3>
+                                <p>Mon to Fri 8am to 7pm</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">📧</span>
+                            <div>
+                                <h3>Email: hyacintheihimbazwe98@gmail.com</h3>
+                                <p>Send us your message anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <!-- Contact Form -->
+                <form class="contact-form" style="flex: 1; min-width: 300px;">
+                    <div class="form-row">
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="email" placeholder="Enter email address" required>
+                    </div>
+                    <input type="text" placeholder="Enter your subject" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <br>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <center>         
+        <h2>My Services</h2>
+
+        <hr style="
+        border: none;
+        height: 5px;
+        width: 90%;
+        background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+        margin: 20px 0;
+        animation: floating 3s ease-in-out infinite;
+      "></center>
+    <section id="services">
+        <div class="all" style="display: flex;justify-content:space-around">
+            <div class="1" style="border: none; width: 30%;border-radius: 8px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);height: auto; background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));">
+                <br><h3>SYSTEM DESIGN</h3><br>
+                I design different stystems according o your referrences that may help in different kind of activities
+            </div>
+            <div class="2" style="border: none; width: 30%;border-radius: 8px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);height: auto; background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));">
+                <br><h3>MOBILE APPS DEVELOP</h3><br>
+                I create user-centered mobile app designs that deliver seamless user experiences and
+ also design innovative and functional mobile applications tailored to user needs
+            </div>
+            <div class="3" style="border: none; width: 30%;border-radius: 8px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);height: auto; background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));">
+                <br><h3>WEB DEVELOPMENT</h3><br>
+                I create visually compelling and user-friendly websites optimized for engagement also
+specialize in crafting customized website designs with a focus on usability and aesthetics.
+            </div>
+        </div>
+    </section>
     <br>
 
     <!-- Footer -->
