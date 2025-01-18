@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background 0.3s;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s, border-bottom 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f39c12;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%; /* Full width underline for active or hovered link */
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+            animation: spin 1s ease-in-out;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            padding: 20px;
+        }
+        .a, .b, .c {
+            width: 30%;
+            height: auto;
+            text-align: left;
+            border: none;
+            margin-bottom: 20px; /* Margin for spacing */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            padding: 20px; /* Added padding for spacing */
+        }
+        .paragraph {
+            width: 40%;
+            text-align: left;
+            border: none;
+        }
+        .hero-image {
+            width: 40%;
+            border-radius: 10px;
+        }
+        .hero-image img {
+            width: 100%; /* Ensure image scales with its container */
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem; /* Smaller heading size */
+            }
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center content */
+            }
+            .hero-image, .paragraph {
+                width: 90%; /* Full width on smaller screens */
+                text-align: center; /* Center text */
+            }
+            .a, .b, .c {
+                width: 100%; /* Full width for footer sections */
+                text-align: center; /* Center text in footer */
+            }
+        }
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem; /* Further reduce heading size */
+            }
+            .btn {
+                padding: 0.5rem 1rem; /* Smaller button padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  
+    <!-- About Section -->
+    <section id="about">
+        <center>
+            <h2>About Me</h2>
+            <hr style="
+                border: none;
+                height: 5px;
+                width: 95%;
+                background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8));
+                margin: 20px 0;
+                animation: floating 3s ease-in-out infinite;
+            "></center>
+
+        <div class="container">
+            <div class="hero-image">
+                <img src="me.jpg" alt="IHIMBAZWE Hyacinthe">
+            </div>
+            <div class="paragraph">
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">I am deeply passionate about software development,</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">driven by a desire to create innovative solutions</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">that blend functionality. Continuously learning and</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">adapting, I thrive on tackling complex challenges</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">and building applications that make a meaningful impact.</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">It would be a great pleasure working with you to reach</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">something big and find solutions for different problems.</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">My projects are designed using the following:</p>
+                <br>
+                <i class="fab fa-html5" style="color: #E34F26; margin: 10px;"></i> HTML
+                <i class="fab fa-css3-alt" style="color: #1572B6; margin: 10px;"></i> CSS
+                <i class="fab fa-php" style="color: #777BB4; margin: 10px;"></i> PHP
+                <i class="fas fa-database" style="color: #4479A1; margin: 10px;"></i> MySQL
+                <i class="fab fa-python" style="color: #3776AB; margin: 10px;"></i> Python <br><br>
+                <a href="hyacinthe cv.pdf" target="_blank" class="btn">View My CV</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="a">
+            <h4>About Me</h4>
+            <p>I'm IHIMBAZWE Hyacinthe, a passionate software developer with the mission to bring solutions to different problems.</p>
+        </div>
+        <div class="b">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="index.html" style="color: #1DA1F2; text-decoration: none;">Home</a></li>
+                <li><a href="about.html" style="color: #1DA1F2; text-decoration: none;">About</a></li>
+                <li><a href="projects.html" style="color: #1DA1F2; text-decoration: none;">Projects</a></li>
+                <li><a href="contact.html" style="color: #1DA1F2; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+        <div class="c">
+            <h4>Contact Me</h4>
+            <p>Email: hyacintheihimbazwe98@gmail.com</p>
+            <p>Phone: +250 785 394 831</p>
+            <h4>Follow Me</h4>
+            <a href="https://twitter.com" target="_blank" style="margin: 0 5px; color: #1DA1F2; text-decoration: none;">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://linkedin.com" target="_blank" style="margin: 0 5px; color: #1DA1F2; text-decoration: none;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" style="margin: 0 5px; color: #1DA1F2; text-decoration: none;">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+    <center>
+        <hr style="height: 1px;width: 90%;">
+        <p>&copy; 2025 Hyacinthe. All rights reserved.</p>
+    </center>
+</body>
+</html>

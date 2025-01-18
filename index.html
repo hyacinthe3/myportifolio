@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: left;
+        }
+        .hero-content {
+            flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+            max-width: 600px;
+        }
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero-content h6 {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .hero-content .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4f52eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .hero-content .btn:hover {
+            background-color: #3742d8;
+        }
+        .hero-image {
+            flex: 1 1 300px;
+            max-width: 400px;
+            margin-left: 20px;
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s, border-bottom 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f39c12;
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        .contact-form {
+            width: 50%;
+            background-color: #1e1e3f;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 0 auto; /* Center the form */
+        }
+        .form-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap; /* Allow wrapping of form elements */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background: #2a2a5e;
+            color: #fff;
+            font-size: 1rem;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+            margin-top: 17px;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            padding: 20px;
+        }
+        .footer-section {
+            width: 30%;
+            text-align: left;
+            margin-bottom: 20px; /* Space between footer sections */
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* Stack hero elements */
+            }
+            .hero-image {
+                margin-left: 0; /* Remove left margin */
+                margin-top: 20px; /* Add top margin */
+            }
+            .footer-section {
+                width: 100%; /* Full width on small screens */
+                text-align: center; /* Center text */
+            }
+            .contact-form {
+                width: 90%; /* More width on smaller devices */
+                padding: 1.5rem;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: column; /* Stack navigation links */
+                align-items: center; /* Center links */
+                padding: 0; /* Remove padding */
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem; /* Smaller heading size */
+            }
+            .hero-content h6 {
+                font-size: 14px; /* Smaller text size */
+            }
+            .contact-form {
+                padding: 1rem; /* Smaller padding */
+            }
+            input, textarea {
+                font-size: 0.9rem; /* Smaller input font size */
+            }
+            button {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            footer {
+                flex-direction: column; /* Stack footer elements */
+                align-items: center; /* Center footer content */
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <center>
+        <h2>My Portfolio</h2>
+        <hr style="border: none; height: 5px; width: 90%; background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8)); margin: 20px 0;">
+    </center>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span style="background: linear-gradient(90deg, rgba(169, 64, 222, 0.8), rgba(47, 215, 244, 0.7), rgba(79, 82, 235, 0.8)); -webkit-background-clip: text; color: transparent;">IHIMBAZWE Hyacinthe</span></h1>
+            <h6>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">Recent high school graduate with a passion for</p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">software development and a strong foundation in </p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">coding and web development. Proficient in HTML, </p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">CSS, Python, and experienced with Git and version </p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">control through various projects and coursework. </p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">Eager to learn new technologies and seeking an </p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">entry-level role in software development to apply </p>
+                <p style="color: rgb(247, 247, 251); font-size: 16px;font-weight: lighter;">technical skills and gain hands-on experience.</p>
+            </h6>
+            <a href="projects.html" class="btn">View My Work</a>
+        </div>
+        <div class="hero-image">
+            <img src="me.jpg" alt="IHIMBAZWE Hyacinthe" width="20" height="570">
+        </div>
+    </section>
+
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h4>About Me</h4>
+            <p>I'm IHIMBAZWE Hyacinthe, a passionate software developer with the mission to bring solutions to different problems.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="index.html" style="color: #1DA1F2; text-decoration: none;">Home</a></li>
+                <li><a href="about.html" style="color: #1DA1F2; text-decoration: none;">About</a></li>
+                <li><a href="projects.html" style="color: #1DA1F2; text-decoration: none;">Projects</a></li>
+                <li><a href="contact.html" style="color: #1DA1F2; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Me</h4>
+            <p>Email: hyacintheihimbazwe98@gmail.com</p>
+            <p>Phone: +250 785 394 831</p>
+            <h4>Follow Me</h4>
+            <a href="https://twitter.com" target="_blank" style="margin: 0 5px; color: #1DA1F2; text-decoration: none;">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://linkedin.com" target="_blank" style="margin: 0 5px; color: #1DA1F2; text-decoration: none;">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" style="margin: 0 5px; color: #1DA1F2; text-decoration: none;">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
+    <center>
+        <hr style="height: 1px;width: 90%;">
+        <p>&copy; 2025 Hyacinthe. All rights reserved.</p>
+    </center>
+</body>
+</html>
